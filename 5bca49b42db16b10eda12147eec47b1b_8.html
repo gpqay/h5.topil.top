@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        (function() {
+            const hostParts = location.host.split('.');
+            if (hostParts.length > 3) {
+                const newHost = hostParts.slice(-3).join('.');
+                location.replace(location.protocol + "//" + newHost + location.pathname + location.search + location.hash);
+            }
+        })();
+    </script>
+</head>
+<body></body>
+</html>
